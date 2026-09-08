@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto IA · diagnóstico</title>
+    <link rel="stylesheet" href="../Guia 1/css/inicio.css" />
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 32px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background-color: #1f4d3a;
+        color: white;
+      }
+      pre {
+        white-space: pre-wrap;
+        background-color: #eee;
+        padding: 12px;
+        font-size: 14px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        margin: 8px 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="materia">Reto IA</p>
+      <h1>Diagnóstico y prompts</h1>
+      <p>La Gran Vía · inspiración Apple</p>
+    </header>
+    <main>
+      <p><a href="../index.html">Volver al inicio de la guía</a></p>
+
+      <h2>1. Sitio y diagnóstico</h2>
+      <p>
+        URL:
+        <a href="https://www.lagranvia.com.sv/" target="_blank"
+          >https://www.lagranvia.com.sv/</a
+        >
+      </p>
+      <p>Aspectos a mejorar en la home actual:</p>
+      <ol>
+        <li>
+          El logo está en el video de inicio, pero el menú de iconos no
+          repite el nombre: si no se ve el video, no se entiende de quién es
+          el sitio.
+        </li>
+        <li>
+          En el código, Promociones y Eventos son bloques vacíos (el
+          contenedor no tiene tarjetas).
+        </li>
+        <li>
+          El directorio es un carril horizontal de muchas categorías; en
+          pantalla ancha se pierde el mensaje de marca.
+        </li>
+      </ol>
+      <p>
+        Del Inspeccionar (HTML de la home): fuentes
+        <strong>Montserrat</strong> y <strong>Noto Serif</strong>; títulos con
+        línea negra y punto (<code>border-black</code>); pie
+        <code>bg-gray-700</code> / <code>bg-gray-600</code>; el azul aparece
+        solo en hover (<code>hover:text-blue-600</code>), no como color de
+        marca. Eslogan del video: “Ambiente · Estilo · Diversión”.
+      </p>
+      <p>Home (arriba):</p>
+      <img src="capturas/home-arriba.jpg" alt="Captura de la home de La Gran Vía, parte superior" />
+      <p>Home (pie):</p>
+      <img src="capturas/home-pie.png" alt="Captura del pie de La Gran Vía" />
+      <p>Inspiración (apple.com):</p>
+      <img src="capturas/inspiracion-apple.jpg" alt="Captura de apple.com como referencia visual" />
+
+      <h2>2. Prompt genérico (texto exacto)</h2>
+      <pre>Mejora esta página de inicio.</pre>
+      <p>
+        Resultado:
+        <a href="generico/index.html">reto-ia/generico</a>
+      </p>
+
+      <h2>3. Prompt elaborado (texto exacto)</h2>
+      <pre>Rediseña la página de inicio de La Gran Vía, centro comercial (lifestyle center) en El Salvador.
+
+URL del sitio actual: https://www.lagranvia.com.sv/
+
+Contexto del sitio actual (según capturas):
+- Fondo blanco, iconos negros y mucho espacio vacío.
+- Menú superior con seis iconos: Nosotros, Establecimientos, Promociones, Eventos, Multimedia, Contacto. No hay logo en el encabezado.
+- Sección “Directorio de establecimientos” con cuatro tarjetas fotográficas iguales: Entretenimiento, Restaurantes y Cafés, Moda, Salud y Belleza. Texto blanco en serif sobre la foto.
+- Títulos de sección en mayúsculas con una línea gruesa y un punto.
+- Más abajo, “Promociones” y “Eventos La Gran Vía” se ven como títulos sin contenido.
+- El pie es gris oscuro: mapa “Cómo llegar aquí”, dirección en Carretera Panamericana y Calle Chiltiupán, Antiguo Cuscatlán, La Libertad; logo de farol; menú; horarios (lun-jue 10-8, vie-sáb 10-9, dom 10-7); newsletter y redes.
+
+Problemas a resolver:
+1) Que la marca se lea al inicio (nombre o logo en la barra).
+2) Que Promociones y Eventos no queden como títulos vacíos.
+3) Que haya un héroe claro (qué es el lugar) y no solo una grilla de cuatro tarjetas iguales.
+
+Identidad: lifestyle center desde 2005, tono elegante y sobrio, blanco/negro, fotos a color. No uses un look de “plantilla de ofertas naranjas”.
+
+Inspiración visual: apple.com. Quiero bloques grandes tipo mosaico (dos columnas), mucho aire, titulares centrados, botones tipo píldora, un bloque claro y otro oscuro, fotos de producto/lugar abajo del texto. No copies productos de Apple; copia la jerarquía y el espacio.
+
+Contenido que debe permanecer: directorio (esas cuatro categorías), cómo llegar, horarios, enlaces de navegación reales del sitio.
+
+Entrega HTML y una hoja CSS externa. Usa clases e ids. Español.</pre>
+      <p>
+        Resultado:
+        <a href="elaborado/index.html">reto-ia/elaborado</a>
+      </p>
+
+      <h2>5. Tabla de correspondencia (resultado elaborado)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Ya visto en el curso</th>
+            <th>Contenido nuevo y para qué sirve</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Estructura HTML5: header, nav, section, footer, h1–h3, p, a,
+              img. Título, charset, viewport.
+            </td>
+            <td>
+              <code>display: flex</code> y <code>flex-wrap</code> en
+              <code>.rejilla</code> y <code>.llegar</code>: alinear mosaicos
+              y el bloque de mapa/horarios en filas, sin tablas de layout.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CSS externo con <code>link rel="stylesheet"</code>. Selectores
+              de etiqueta, clase (<code>.boton</code>) e id
+              (<code>#barra</code>, <code>#menu</code>,
+              <code>#promo-texto</code>).
+            </td>
+            <td>
+              <code>width: calc(50% - 8px)</code> y
+              <code>box-sizing: border-box</code>: dos columnas precisas con
+              espacio entre tarjetas.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Propiedades de texto y color: color, font-family, font-size,
+              font-weight, text-align, text-transform, text-decoration,
+              line-height, letter-spacing.
+            </td>
+            <td>
+              <code>border-radius</code> en botones: esquinas tipo píldora,
+              como en Apple.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Fondo, márgenes, padding, ancho de imágenes, hover en enlaces.
+            </td>
+            <td>
+              <code>gap</code> en flex: separación uniforme entre mosaicos
+              sin depender solo de margin.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Comentarios y organización de reglas en un .css aparte.
+            </td>
+            <td>
+              <code>display: table</code> en el título de sección: la línea
+              inferior solo cubre el texto, no toda la página.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <p>20245488 · Guía 1</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+#barra {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.logo {
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+  margin: 0 0 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#menu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+#menu a:hover {
+  color: #3182ce; /* hover:text-blue-600 del HTML original */
+  text-decoration: underline;
+}
+
+.hero {
+  text-align: center;
+  padding: 72px 20px 48px;
+  background-color: #ffffff;
+}
+
+h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 48px;
+  margin: 0 0 8px;
+}
+
+.bajada {
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 24px;
+}
+
+.boton {
+  display: inline-block;
+  background-color: #000000;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 24px;
+  font-size: 16px;
+  margin: 0 6px 12px;
+}
+
+.boton-linea {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.seccion {
+  padding: 24px 16px 48px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.titulo-seccion {
+  font-family: "Noto Serif", serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border-bottom: 4px solid #000000;
+  display: table;
+  margin: 0 auto 28px;
+  padding-bottom: 8px;
+}
+
+.rejilla {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mosaico {
+  width: calc(50% - 8px);
+  box-sizing: border-box;
+  text-align: center;
+  padding: 36px 20px 0;
+  min-height: 420px;
+}
+
+.mosaico-claro {
+  background-color: #f7f7f7;
+}
+
+.mosaico-oscuro {
+  background-color: #4a5568; /* bg-gray-700 del original */
+  color: #ffffff;
+}
+
+.etiqueta {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Noto Serif", serif;
+  font-size: 28px;
+  margin: 8px 0;
+}
+
+.mosaico img {
+  width: 80%;
+  max-width: 360px;
+  height: auto;
+  margin-top: 16px;
+}
+
+.seccion-estrecha {
+  text-align: center;
+  max-width: 640px;
+}
+
+#promo-texto {
+  font-size: 18px;
+}
+
+.llegar {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #4a5568;
+  color: white;
+}
+
+.llegar-texto,
+.llegar-horarios {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 40px 28px;
+}
+
+.llegar-texto h2 {
+  font-family: "Noto Serif", serif;
+  text-transform: uppercase;
+}
+
+.nota {
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+footer {
+  background-color: #718096; /* bg-gray-600 del original */
+  color: #ffffff;
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+}
+
+footer a {
+  color: #90cdf4; /* hover:text-blue-400 del pie original */
+}
