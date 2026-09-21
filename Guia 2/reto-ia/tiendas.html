@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiendas — Multiplaza San Salvador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .encabezado-tiendas {
+            padding: 70px 25px 40px;
+            text-align: center;
+        }
+
+        .encabezado-tiendas h1 {
+            font-size: 44px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            margin: 18px 0 12px;
+        }
+
+        .encabezado-tiendas p {
+            color: var(--color-grafito);
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .barra-filtros {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px 0;
+            padding: 30px 25px 10px;
+            border-bottom: 1px solid var(--color-niebla);
+            margin-bottom: var(--espacio-seccion);
+        }
+
+        .filtro {
+            display: inline-block;
+            border-radius: var(--radio-boton);
+            border: 1px solid var(--color-niebla);
+            background: transparent;
+            font-family: var(--fuente);
+            font-size: 13px;
+            padding: 8px 18px;
+            cursor: pointer;
+            color: var(--color-obsidiana);
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .filtro:hover,
+        .filtro.activo {
+            border-color: var(--color-ultramar);
+            color: var(--color-ultramar);
+        }
+
+        .grupo-categoria {
+            padding-bottom: var(--espacio-seccion);
+        }
+
+        .grupo-categoria h2 {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin-bottom: 26px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" style="text-decoration:none;">
+            <div class="marca-nav">
+                <span class="nombre">MULTIPLAZA</span>
+                <span class="desde">San Salvador</span>
+            </div>
+        </a>
+        <div class="menu-nav">
+            <a href="index.html">Inicio</a>
+            <a href="tiendas.html" class="activo">Tiendas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="encabezado-tiendas">
+        <span class="microetiqueta">218+ locales</span>
+        <h1>Tiendas</h1>
+        <p>Si buscas una tienda, un restaurante o el cine, aquí están agrupados por tipo.</p>
+    </header>
+
+    <div class="wrapper">
+        <div class="barra-filtros">
+            <button class="filtro activo">Todas</button>
+            <button class="filtro">Moda femenina</button>
+            <button class="filtro">Moda masculina</button>
+            <button class="filtro">Calzado</button>
+            <button class="filtro">Restaurantes y bares</button>
+            <button class="filtro">Cine y entretenimiento</button>
+            <button class="filtro">Joyería</button>
+            <button class="filtro">Belleza y perfumería</button>
+        </div>
+
+        <section class="grupo-categoria">
+            <h2>Moda femenina y masculina</h2>
+            <div class="rejilla-productos">
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Carolina Herrera</div>
+                    <span class="nombre-producto">Carolina Herrera</span>
+                    <span class="detalle-producto">Moda de lujo</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Mango</div>
+                    <span class="nombre-producto">Mango</span>
+                    <span class="detalle-producto">Moda contemporánea</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">H&amp;M</div>
+                    <span class="nombre-producto">H&amp;M</span>
+                    <span class="detalle-producto">Moda para todos</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Calvin Klein</div>
+                    <span class="nombre-producto">Calvin Klein</span>
+                    <span class="detalle-producto">Moda y accesorios</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grupo-categoria">
+            <h2>Restaurantes y bares</h2>
+            <div class="rejilla-productos">
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Cocina internacional</div>
+                    <span class="nombre-producto">Sabores del mundo</span>
+                    <span class="detalle-producto">Food court y restaurantes</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Café</div>
+                    <span class="nombre-producto">Helados y cafés</span>
+                    <span class="detalle-producto">Para una pausa dulce</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Comida rápida</div>
+                    <span class="nombre-producto">Comida rápida</span>
+                    <span class="detalle-producto">Opciones para todos los gustos</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Bares</div>
+                    <span class="nombre-producto">Bares y terrazas</span>
+                    <span class="detalle-producto">Las Terrazas al aire libre</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grupo-categoria">
+            <h2>Deporte, calzado y accesorios</h2>
+            <div class="rejilla-productos">
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Decathlon</div>
+                    <span class="nombre-producto">Decathlon</span>
+                    <span class="detalle-producto">Artículos deportivos</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Calzado</div>
+                    <span class="nombre-producto">Calzados</span>
+                    <span class="detalle-producto">Para cada ocasión</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Joyería</div>
+                    <span class="nombre-producto">Joyería y relojería</span>
+                    <span class="detalle-producto">Accesorios y bisutería</span>
+                </div>
+                <div class="tarjeta-producto">
+                    <div class="marco-imagen">Belleza</div>
+                    <span class="nombre-producto">Salud y belleza</span>
+                    <span class="detalle-producto">Cosméticos y perfumería</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="pie-mall">
+        <div class="wrapper columnas-pie">
+            <div>
+                <h4>Información</h4>
+                <a href="#">Carretera Panamericana, Antiguo Cuscatlán</a>
+                <a href="#">Lun-Sáb: 10AM-8PM · Dom: 10AM-7PM</a>
+                <a href="tel:2504-5555">2504-5555</a>
+            </div>
+            <div>
+                <h4>Explora</h4>
+                <a href="tiendas.html">Tiendas</a>
+                <a href="tiendas.html">Restaurantes</a>
+                <a href="index.html">Eventos</a>
+            </div>
+            <div>
+                <h4>Sitio</h4>
+                <a href="index.html">Inicio</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <a href="https://www.instagram.com/multiplazasv" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/multiplazaelsalvador" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+        <div class="wrapper linea-copyright">
+            Rediseño de Multiplaza San Salvador para la Guía 2. Colores y tipografía tomados del estilo Bang &amp; Olufsen en Refero.
+        </div>
+    </footer>
+
+</body>
+</html>

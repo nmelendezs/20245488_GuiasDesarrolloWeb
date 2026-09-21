@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía 2 — Selectores CSS avanzados y modelo de caja</title>
+    <style>
+        :root {
+            --fondo: #f6f1ea;
+            --tinta: #2b2320;
+            --acento: #8c1f3d;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--fondo);
+            color: var(--tinta);
+            font-family: "Segoe UI", system-ui, sans-serif;
+            padding: 60px 6%;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        p.subtitulo {
+            color: #6b6058;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 520px;
+        }
+        li {
+            border-bottom: 1px solid rgba(43,35,32,0.15);
+        }
+        a {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 4px;
+            color: var(--tinta);
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+        a:hover { color: var(--acento); }
+        span.desc {
+            font-size: 0.85rem;
+            color: #6b6058;
+        }
+        .video-guia {
+            max-width: 720px;
+            margin-top: 56px;
+        }
+        .video-guia h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+        .video-guia p {
+            color: #6b6058;
+            font-size: 0.92rem;
+            margin: 0 0 16px;
+            line-height: 1.5;
+        }
+        .video-marco {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #e8dfd4;
+            border: 1px dashed rgba(43, 35, 32, 0.25);
+            overflow: hidden;
+        }
+        .video-marco iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .video-placeholder {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            color: #6b6058;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guía de Laboratorio Nº 2</h1>
+    <p class="subtitulo">Nicole Meléndez — 20245488 — Desarrollo Web I</p>
+    <ul>
+        <li><a href="pelicula.html">Ejercicio 1 — Altamar <span class="desc">Selectores avanzados</span></a></li>
+        <li><a href="tablero.html">Ejercicio 2 — Tablero de damas <span class="desc">nth-child()</span></a></li>
+        <li><a href="biografia.html">Biografía <span class="desc">Ejercicio complementario</span></a></li>
+        <li><a href="reto-ia/index.html">Reto IA — Multiplaza <span class="desc">3 páginas</span></a></li>
+    </ul>
+
+    <section class="video-guia">
+        <h2>Video del Reto IA</h2>
+        <p>Explicación del estilo de Refero, de cómo armé la instrucción y recorrido de las tres páginas. Cuando el video esté en YouTube, se incrusta en el recuadro.</p>
+        <div class="video-marco">
+            <!-- Cuando tengas el video, borra el div.video-placeholder y descomenta el iframe.
+                 Cambia SOLO el VIDEO_ID (la parte después de youtu.be/ o de watch?v=). -->
+            <div class="video-placeholder">Espacio para el video (máximo 10 minutos)</div>
+            <!--
+            <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Video explicativo — Guía 2, Reto IA"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            -->
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplaza San Salvador — Rediseño</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Entrada del texto del hero */
+        @keyframes aparicion {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            padding: 90px 25px 110px;
+            text-align: center;
+        }
+
+        .hero-contenido > * {
+            opacity: 0;
+            animation: aparicion 0.7s ease forwards;
+        }
+
+        .hero-contenido .microetiqueta { animation-delay: 0.05s; }
+        .hero-contenido h1 { animation-delay: 0.18s; }
+        .hero-contenido p { animation-delay: 0.32s; }
+        .hero-contenido .acciones-hero { animation-delay: 0.46s; }
+
+        .hero-contenido {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 500;
+            letter-spacing: -0.056em;
+            line-height: 1.05;
+            margin: 22px 0 18px;
+        }
+
+        .hero p.intro {
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+            margin: 0 0 34px;
+        }
+
+        .microetiqueta--clara {
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 6px 16px;
+            color: var(--color-porcelana);
+        }
+
+        .acciones-hero .boton-ghost {
+            margin: 0 6px;
+        }
+
+        .franja-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding-top: var(--espacio-seccion);
+            padding-bottom: var(--espacio-seccion);
+            border-bottom: 1px solid var(--color-niebla);
+        }
+
+        .franja-info article h3 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0 0 8px;
+        }
+
+        .franja-info article p {
+            font-size: 14px;
+            color: var(--color-grafito);
+            margin: 0;
+        }
+
+        .bienvenida {
+            display: flex;
+            gap: 60px;
+            align-items: flex-start;
+            padding-bottom: var(--espacio-seccion);
+        }
+
+        .bienvenida .prosa {
+            flex: 1;
+        }
+
+        .bienvenida .cifra {
+            flex: 0 0 220px;
+            text-align: right;
+        }
+
+        .bienvenida .cifra strong {
+            display: block;
+            font-size: 64px;
+            font-weight: 500;
+            letter-spacing: -0.03em;
+            color: var(--color-ultramar);
+        }
+
+        .bienvenida .cifra span {
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--color-grafito);
+        }
+
+        .destacado-editorial {
+            margin-top: 40px;
+            padding: 80px 25px;
+            text-align: center;
+        }
+
+        .destacado-editorial p {
+            max-width: 560px;
+            margin: 18px auto 0;
+            font-size: 18px;
+            color: rgba(255,255,255,0.85);
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 38px; }
+            .franja-info { grid-template-columns: 1fr; }
+            .bienvenida { flex-direction: column; }
+            .bienvenida .cifra { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" class="menu-nav-link" style="text-decoration:none;">
+            <div class="marca-nav">
+                <span class="nombre">MULTIPLAZA</span>
+                <span class="desde">San Salvador</span>
+            </div>
+        </a>
+        <div class="menu-nav">
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="tiendas.html">Tiendas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="hero camara-ultramar">
+        <div class="hero-contenido">
+            <span class="microetiqueta microetiqueta--clara">Antiguo Cuscatlán</span>
+            <h1>Centro comercial en Antiguo Cuscatlán</h1>
+            <p class="intro">Multiplaza San Salvador tiene más de 218 locales: tiendas de ropa, comida y cine. Está en la Carretera Panamericana.</p>
+            <div class="acciones-hero">
+                <a href="tiendas.html" class="boton-ghost boton-ghost--invertido">Ver tiendas</a>
+                <a href="contacto.html" class="boton-ghost boton-ghost--invertido">Cómo llegar</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrapper">
+
+        <section class="franja-info">
+            <article>
+                <h3>Wi-Fi gratuito</h3>
+                <p>Red accesible en toda el área común del centro comercial.</p>
+            </article>
+            <article>
+                <h3>Horario</h3>
+                <p>Lunes a sábado 10AM–8PM · Domingo 10AM–7PM.</p>
+            </article>
+            <article>
+                <h3>Ubicación</h3>
+                <p>Carretera Panamericana, Antiguo Cuscatlán.</p>
+            </article>
+        </section>
+
+        <section class="bienvenida">
+            <div class="prosa">
+                <h2 class="titulo-seccion">Bienvenido a Multiplaza</h2>
+                <p>Multiplaza El Salvador lo diseñó Legorreta + Legorreta. Hay restaurantes, cine y tiendas, todo en el mismo lugar.</p>
+                <p>Hay marcas como Carolina Herrera, Mango o Calvin Klein, y también zona de comida y Las Terrazas afuera.</p>
+            </div>
+            <div class="cifra">
+                <strong>218+</strong>
+                <span>Locales comerciales</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="titulo-seccion">Categorías destacadas</h2>
+            <div class="rejilla-productos">
+                <a class="tarjeta-producto" href="tiendas.html">
+                    <div class="marco-imagen">Moda</div>
+                    <span class="nombre-producto">Moda femenina y masculina</span>
+                    <span class="detalle-producto">Carolina Herrera, Mango, H&amp;M, Calvin Klein</span>
+                </a>
+                <a class="tarjeta-producto" href="tiendas.html">
+                    <div class="marco-imagen">Gastronomía</div>
+                    <span class="nombre-producto">Restaurantes y bares</span>
+                    <span class="detalle-producto">Un viaje gastronómico alrededor del mundo</span>
+                </a>
+                <a class="tarjeta-producto" href="tiendas.html">
+                    <div class="marco-imagen">Deporte</div>
+                    <span class="nombre-producto">Artículos deportivos</span>
+                    <span class="detalle-producto">Decathlon y más</span>
+                </a>
+                <a class="tarjeta-producto" href="tiendas.html">
+                    <div class="marco-imagen">Cine</div>
+                    <span class="nombre-producto">Cine y entretenimiento</span>
+                    <span class="detalle-producto">Planes para toda la familia</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="destacado-editorial camara-ultramar">
+        <span class="microetiqueta microetiqueta--clara">Las Terrazas</span>
+        <p>Hay mesas afuera para comer o juntarse. Queda en la parte de Las Terrazas.</p>
+    </section>
+
+    <footer class="pie-mall">
+        <div class="wrapper columnas-pie">
+            <div>
+                <h4>Información</h4>
+                <a href="#">Carretera Panamericana, Antiguo Cuscatlán</a>
+                <a href="#">Lun-Sáb: 10AM-8PM · Dom: 10AM-7PM</a>
+                <a href="tel:2504-5555">2504-5555</a>
+            </div>
+            <div>
+                <h4>Explora</h4>
+                <a href="tiendas.html">Tiendas</a>
+                <a href="tiendas.html">Restaurantes</a>
+                <a href="index.html">Eventos</a>
+            </div>
+            <div>
+                <h4>Sitio</h4>
+                <a href="index.html">Inicio</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <a href="https://www.instagram.com/multiplazasv" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/multiplazaelsalvador" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+        <div class="wrapper linea-copyright">
+            Rediseño de Multiplaza San Salvador para la Guía 2. Colores y tipografía tomados del estilo Bang &amp; Olufsen en Refero.
+        </div>
+    </footer>
+
+</body>
+</html>

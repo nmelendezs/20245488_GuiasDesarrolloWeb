@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Multiplaza San Salvador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .encabezado-contacto {
+            padding: 70px 25px 40px;
+            text-align: center;
+        }
+
+        .encabezado-contacto h1 {
+            font-size: 44px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            margin: 18px 0 12px;
+        }
+
+        .encabezado-contacto p {
+            color: var(--color-grafito);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .fila-contacto {
+            display: flex;
+            gap: 60px;
+            padding-bottom: 100px;
+        }
+
+        .fila-contacto > div {
+            flex: 1;
+        }
+
+        .lista-datos {
+            border-top: 1px solid var(--color-niebla);
+            margin: 0;
+        }
+
+        .lista-datos > div {
+            display: flex;
+            justify-content: space-between;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--color-niebla);
+        }
+
+        .lista-datos dt {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--color-grafito);
+        }
+
+        .lista-datos dd {
+            margin: 0;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        /* Pseudo-clase first-child: la primera fila de datos se acentúa */
+        .lista-datos > div:first-child {
+            border-top: 2px solid var(--color-ultramar);
+        }
+
+        .mapa-marcador {
+            margin-top: 40px;
+            aspect-ratio: 4 / 3;
+            background-color: var(--color-hueso);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-grafito);
+            font-size: 13px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .boton-enviar {
+            border: none;
+            border-radius: var(--radio-boton);
+            background-color: var(--color-tinta);
+            color: var(--color-porcelana);
+            font-family: var(--fuente);
+            font-size: 14px;
+            font-weight: 500;
+            padding: 14px 32px;
+            cursor: pointer;
+            transition: background-color 0.25s ease;
+        }
+
+        .boton-enviar:hover {
+            background-color: var(--color-ultramar);
+        }
+
+        @media (max-width: 800px) {
+            .fila-contacto {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <a href="index.html" style="text-decoration:none;">
+            <div class="marca-nav">
+                <span class="nombre">MULTIPLAZA</span>
+                <span class="desde">San Salvador</span>
+            </div>
+        </a>
+        <div class="menu-nav">
+            <a href="index.html">Inicio</a>
+            <a href="tiendas.html">Tiendas</a>
+            <a href="contacto.html" class="activo">Contacto</a>
+        </div>
+    </nav>
+
+    <header class="encabezado-contacto">
+        <span class="microetiqueta">Estamos para ayudarte</span>
+        <h1>Contacto</h1>
+        <p>Puedes escribirnos por el formulario o ir directo al mall, en Antiguo Cuscatlán.</p>
+    </header>
+
+    <div class="wrapper fila-contacto">
+        <div>
+            <h2 class="titulo-seccion" style="margin-bottom:26px;">Escríbenos</h2>
+            <form class="formulario-contacto" onsubmit="return false;">
+                <div>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                </div>
+                <div>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos en qué podemos ayudarte" required></textarea>
+                </div>
+                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+            </form>
+        </div>
+
+        <div>
+            <h2 class="titulo-seccion" style="margin-bottom:26px;">Información</h2>
+            <dl class="lista-datos">
+                <div><dt>Dirección</dt><dd>Carretera Panamericana, Antiguo Cuscatlán</dd></div>
+                <div><dt>Horario</dt><dd>Lun–Sáb 10AM–8PM · Dom 10AM–7PM</dd></div>
+                <div><dt>Teléfono</dt><dd>2504-5555</dd></div>
+                <div><dt>Correo</dt><dd>multiplazasv@gruporoble.com</dd></div>
+            </dl>
+            <div class="mapa-marcador">Mapa — Carretera Panamericana, Antiguo Cuscatlán</div>
+        </div>
+    </div>
+
+    <footer class="pie-mall">
+        <div class="wrapper columnas-pie">
+            <div>
+                <h4>Información</h4>
+                <a href="#">Carretera Panamericana, Antiguo Cuscatlán</a>
+                <a href="#">Lun-Sáb: 10AM-8PM · Dom: 10AM-7PM</a>
+                <a href="tel:2504-5555">2504-5555</a>
+            </div>
+            <div>
+                <h4>Explora</h4>
+                <a href="tiendas.html">Tiendas</a>
+                <a href="tiendas.html">Restaurantes</a>
+                <a href="index.html">Eventos</a>
+            </div>
+            <div>
+                <h4>Sitio</h4>
+                <a href="index.html">Inicio</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+            <div>
+                <h4>Síguenos</h4>
+                <a href="https://www.instagram.com/multiplazasv" target="_blank" rel="noopener">Instagram</a>
+                <a href="https://www.facebook.com/multiplazaelsalvador" target="_blank" rel="noopener">Facebook</a>
+            </div>
+        </div>
+        <div class="wrapper linea-copyright">
+            Rediseño de Multiplaza San Salvador para la Guía 2. Colores y tipografía tomados del estilo Bang &amp; Olufsen en Refero.
+        </div>
+    </footer>
+
+</body>
+</html>
