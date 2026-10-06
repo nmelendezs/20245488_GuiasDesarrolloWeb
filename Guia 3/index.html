@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía 3 — Posicionamiento, visualización y maquetación</title>
+    <style>
+        :root {
+            --fondo: #f6f1ea;
+            --tinta: #2b2320;
+            --acento: #8c1f3d;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            background: var(--fondo);
+            color: var(--tinta);
+            font-family: "Segoe UI", system-ui, sans-serif;
+            padding: 60px 6%;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+        p.subtitulo {
+            color: #6b6058;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            max-width: 560px;
+        }
+        li {
+            border-bottom: 1px solid rgba(43, 35, 32, 0.15);
+        }
+        a {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 18px 4px;
+            color: var(--tinta);
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+        a:hover { color: var(--acento); }
+        span.desc {
+            font-size: 0.85rem;
+            color: #6b6058;
+        }
+        .video-guia {
+            max-width: 720px;
+            margin-top: 56px;
+        }
+        .video-guia h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+        }
+        .video-guia p {
+            color: #6b6058;
+            font-size: 0.92rem;
+            margin: 0 0 16px;
+            line-height: 1.5;
+        }
+        .video-marco {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #e8dfd4;
+            overflow: hidden;
+        }
+        .video-marco iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Guía de Laboratorio Nº 3</h1>
+    <p class="subtitulo">Nicole Meléndez — 20245488 — Desarrollo Web I</p>
+    <ul>
+        <li><a href="ejemplo1/index.html">Ejemplo 1 — Maravillas del Mundo <span class="desc">Flexbox y posicionamiento</span></a></li>
+        <li><a href="ejemplo2/index.html">Ejemplo 2 — Compañía Miau <span class="desc">Menú lateral</span></a></li>
+        <li><a href="ejercicio/ejercicio.html">Ejercicio — Cartas <span class="desc">z-index</span></a></li>
+        <li><a href="reto-ia/index.html">Reto IA — Multiplaza <span class="desc">CSS Grid</span></a></li>
+    </ul>
+
+    <section class="video-guia">
+        <h2>Video del Reto IA</h2>
+        <p>Explicación de la instrucción, del contenedor Grid de la página de inicio y del cambio de separación entre las categorías.</p>
+        <div class="video-marco">
+            <iframe
+                src="https://www.youtube.com/embed/B1CEe4LjPCs"
+                title="Video explicativo — Guía 3, Reto IA"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+</body>
+</html>

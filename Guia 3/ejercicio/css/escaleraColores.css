@@ -1,0 +1,93 @@
+body {
+  margin: 2rem 2.5rem 4rem;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+}
+
+h2 {
+  margin: 1.5rem 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.resultado {
+  position: relative;
+  height: 160px;
+  margin: 0 0 2.5rem 1.5rem;
+}
+
+.carta {
+  position: absolute;
+}
+
+.carta img {
+  display: block;
+  width: 70px;
+  height: 96px;
+}
+
+.resultado-1 .as {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.resultado-1 .rey {
+  top: 12px;
+  left: 22px;
+  z-index: 2;
+}
+
+.resultado-1 .reina {
+  top: 24px;
+  left: 44px;
+  z-index: 3;
+}
+
+.resultado-1 .sota {
+  top: 36px;
+  left: 66px;
+  z-index: 4;
+}
+
+.resultado-1 .diez {
+  top: 48px;
+  left: 88px;
+  z-index: 5;
+}
+
+.resultado-2 .as {
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.resultado-2 .rey {
+  top: 12px;
+  left: 22px;
+  z-index: 4;
+}
+
+.resultado-2 .reina {
+  top: 24px;
+  left: 44px;
+  z-index: 3;
+}
+
+.resultado-2 .sota {
+  top: 36px;
+  left: 66px;
+  z-index: 2;
+}
+
+.resultado-2 .diez {
+  top: 48px;
+  left: 88px;
+  z-index: 1;
+}
